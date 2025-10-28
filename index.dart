@@ -266,4 +266,15 @@ var roast = "roast";
 var pies = "pies";
 
 
-/
+//Async, awsit and future
+Future<String> fetchData() async {
+  // Simulate a network delay
+  await Future.delayed(Duration(seconds: 2));
+  return 'Data fetched from the server';
+}
+void asyncExample() async {
+  print('Fetching data...');
+  String data = await fetchData();
+  print(data);
+}
+//await

@@ -225,3 +225,45 @@ class Dog extends Animal {
     print('Bark');
   }
 }
+
+//generics
+
+
+void damn () {
+
+
+
+  var food = collections('Menu Items', ["noodles", pizza, roast, pies]);
+}
+class collections {
+  String name;
+  List data;
+
+  collections(this.name, this.data);
+
+  randomItem() {
+    data.shuffle();
+
+    return data[0];
+  }
+}
+
+//genrrics with type constraint
+class collections2<T extends String> {
+  String name;
+  List<T> data;
+
+  collections2(this.name, this.data);
+
+  randomItem() {
+    data.shuffle();
+
+    return data[0];
+  }
+}
+var pizza = "pizza";
+var roast = "roast";
+var pies = "pies";
+
+
+/

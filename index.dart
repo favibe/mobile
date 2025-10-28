@@ -183,5 +183,45 @@ List<int> numbers = [10, 25, 40, 55, 70, 90];
 
 // Filter out numbers less than 50
 var smallNumbers = numbers.where((n) => n < 50);
-print(smallNumbers); // (10, 25, 40)
+void showSmallNumbers() {
+  // Convert the Iterable to a List for clearer output
+  final list = smallNumbers.toList();
+  print(list); // [10, 25, 40]
+}
 
+//showSmallNumbers();
+
+//classes
+
+class Person {
+  String name;
+  int age;
+
+  Person(this.name, this.age);
+
+  String greet() {
+    return 'Hello, my name is $name and I am $age years old.';
+  }
+}
+
+void go() {
+  var person1 = Person('Mario', 30);
+  print(person1.greet());
+
+  var person2 = Person('Luigi', 28);
+  print(person2.greet());
+}
+
+
+//method override
+class Animal {
+  void makeSound() {
+    print('Someeee sound');
+  }
+} 
+class Dog extends Animal {
+  @override
+  void makeSound() {
+    print('Bark');
+  }
+}

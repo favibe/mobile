@@ -134,3 +134,54 @@ void now() {
   food.clear();
   print(food); // {}
 }
+
+//control flows
+void controlFlows() {
+  int score = 75;
+
+  //if-else
+  if (score >= 90) {
+    print('A');
+  } else if (score >= 80) {
+    print('B');
+  } else if (score >= 70) {
+    print('C');
+  } else {
+    print('F');
+  }
+
+  //switch-case
+  String grade;
+  switch (score) {
+    case 90:
+      grade = 'A';
+      break;
+    case 80:
+      grade = 'B';
+      break;
+    case 70:
+      grade = 'C';
+      break;
+    default:
+      grade = 'F';
+  }
+  print('Grade: $grade');
+
+  //for loop
+  for (int i = 0; i < 5; i++) {
+    print('Iteration: $i');
+  }
+
+  //while loop
+  int count = 0;
+  while (count < 5) {
+    print('Count: $count');
+    count++;
+  }
+}
+List<int> numbers = [10, 25, 40, 55, 70, 90];
+
+// Filter out numbers less than 50
+var smallNumbers = numbers.where((n) => n < 50);
+print(smallNumbers); // (10, 25, 40)
+

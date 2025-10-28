@@ -115,4 +115,22 @@ void now() {
   // If multiple same items exist, indexOf returns the FIRST one
   print('First index of Mango: ${fruits.indexOf('Mango')}');
   print('Last index of Mango: ${fruits.lastIndexOf('Mango')}');
+
+
+
+  //set
+   Set<String> food = {'Rice', 'Beans', 'Yam'};
+  print(food); // {Rice, Beans, Yam}
+
+  //add
+  food.add('Plantain');;
+  print(food); // {Rice, Beans, Yam, Plantain}
+
+  //remove
+  food.remove('Beans');
+  print(food); // {Rice, Yam, Plantain}     
+
+  //clear
+  food.clear();
+  print(food); // {}
 }

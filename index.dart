@@ -30,8 +30,8 @@ String city = "new york";
   print(price);
 
   //nukllable value
-  int point;
-  print(point); //null(throws an error)
+ // int point;
+  //print(point); //null(throws an error)
 
   int? score;
   print(score); //null (no error)
@@ -72,5 +72,47 @@ greet3 ({String name = 'guest', int age = 0}) {
 }
 //Ex 3
 String greetUser({required String name, int? age}) {
-  return 'Hello $name, you are $age years old.';
+  return 'Hello $name, you are ${age ?? 0} years old.';
+
+  List<int>numbers = [1,2,3,4,5,6];
+
+
+}
+
+void now() {
+  // 1️⃣ Create a list of strings
+  List<String> fruits = ['Apple', 'Banana', 'Orange'];
+  print('Original list: $fruits');
+
+  // 2️⃣ Add items
+  fruits.add('Mango');                 // adds one item
+  fruits.addAll(['Pineapple', 'Grapes']); // adds multiple items
+  print('After adding: $fruits');
+
+  // 3️⃣ Remove items
+  fruits.remove('Banana');  // removes by value
+  print('After removing Banana: $fruits');
+
+  fruits.removeAt(0);       // removes by index (0 = first item)
+  print('After removing index 0: $fruits');
+
+  fruits.removeRange(1, 3); // removes a range of items (index 1 up to but not including 3)
+  print('After removing range(1, 3): $fruits');
+
+  // 4️⃣ Shuffle the list
+  fruits.shuffle(); // randomly changes the order of items
+  print('After shuffle: $fruits');
+
+  // 5️⃣ Get index of an element
+  int index = fruits.indexOf('Mango');
+  print('Index of Mango: $index');
+
+  // 6️⃣ Add a few back to see index change
+  fruits.add('Apple');
+  fruits.add('Mango');
+  print('List again: $fruits');
+
+  // If multiple same items exist, indexOf returns the FIRST one
+  print('First index of Mango: ${fruits.indexOf('Mango')}');
+  print('Last index of Mango: ${fruits.lastIndexOf('Mango')}');
 }
